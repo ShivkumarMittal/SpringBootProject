@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<h1>This is a service page</h1>
-</body>
+<html th:replace="~{base :: parent(~{::#content1},~{:: title},~{::script})}">
+  <head>
+    <title>Service page</title>
+  </head>
+  <body>
+    <div id="content1">
+      <h1>This is about page</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+        numquam.
+      </p>
+    </div>
+
+    <script>
+      console.log("about page");
+    </script>
+  </body>
 </html>
