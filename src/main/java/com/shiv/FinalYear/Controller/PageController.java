@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 @Controller
 public class PageController {
 	
-	@GetMapping("/home")
+	@GetMapping("/")
 	public String home(Model model)
 	{
 		//sending data to view
@@ -31,6 +31,30 @@ public class PageController {
 	{
 		System.out.println("service page controller");
 		return "service";
+		
+	}
+
+	@GetMapping("/contact")
+	public String contact(Model model)
+	{
+		System.out.println("contact page controller");
+		return "contact";
+		
+	}
+
+	@GetMapping("/login")
+	public String login()
+	{
+		System.out.println("login page controller");
+		return "login";
+		
+	}
+
+	@GetMapping("/register")
+	public String register()
+	{
+		System.out.println("register page controller");
+		return "register";
 		
 	}
 
